@@ -197,8 +197,7 @@ export const adminData = [
 export function getLocalStorageItem() {
     const employees = JSON.parse(localStorage.getItem("employees"));
     const admin = JSON.parse(localStorage.getItem("admin"));
-    console.log("Employees from LS:", employees);
-    console.log("Admin from LS:", admin);
+    return { employees, admin };
 }
 
 export function setLocalStorageItem() {

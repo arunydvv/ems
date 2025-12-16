@@ -6,20 +6,14 @@ const Login = ({handleLogin}) => {
 
   function submitHandler(e) {
     e.preventDefault();
-    console.log({
-      email,
-      password
-    })
-
-    
+    handleLogin(email, password);
     setEmail('');
     setPassword('')
-
   }
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-black px-4">
-      <div className="w-full max-w-md rounded-2xl border border-emerald-500/30 bg-gray-900/70 p-8 shadow-2xl backdrop-blur">
+      <div className="w-full max-w-md rounded-2xl border border-emerald-500/30  p-8 shadow-2xl backdrop-blur">
         <h2 className="mb-6 text-center text-2xl font-semibold text-white">
           Welcome Back
         </h2>
