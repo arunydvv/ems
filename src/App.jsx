@@ -22,6 +22,7 @@ const App = () => {
   }, [authData]);
 
 
+
   const handleLogin = (email, password) => {
     const adminValue = authData?.admin?.find(
       (adm) => adm.email === email && adm.password === password
@@ -64,8 +65,8 @@ const App = () => {
   return (
     <>
       {!user && <Login handleLogin={handleLogin} />}
-      {user === "admin" && <AdminDashboard data={loggedInUserData} />}
-      {user === "employee" && <EmployeeDashboard data={loggedInUserData} />}
+      {user === "admin" && loggedInUserData && <AdminDashboard data={loggedInUserData} />}
+      {user === "employee" && loggedInUserData && <EmployeeDashboard data={loggedInUserData} />}
     </>
   );
 };

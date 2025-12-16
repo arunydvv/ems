@@ -13,13 +13,29 @@ const TaskBox = ({ number, text, colour }) => {
 };
 
 
-const TaskListNumbers = () => {
+const TaskListNumbers = ({numbers}) => {
   return (
     <div className="flex mt-10 justify-between gap-5 screen">
-      <TaskBox number={12} text={"Total Tasks"} colour={"#34D399"} />
-      <TaskBox number={12} text={"Total Tasks"} colour={"#38BDF8"} />
-      <TaskBox number={12} text={"Total Tasks"} colour={"#A78BFA"} />
-      <TaskBox number={12} text={"Total Tasks"} colour={"#FDBA74"} />
+      <TaskBox
+        number={numbers.total}
+        text={"Total Tasks"}
+        colour={"#34D399"}
+      />
+      <TaskBox
+        number={numbers.active}
+        text={"Active Tasks"}
+        colour={"#38BDF8"}
+      />
+      <TaskBox
+        number={numbers.completed}
+        text={"Completed Tasks"}
+        colour={"#A78BFA"}
+      />
+      <TaskBox
+        number={numbers.failed}
+        text={"Failed Tasks"}
+        colour={"#FDBA74"}
+      />
     </div>
   );
 }
