@@ -3,7 +3,7 @@ import TaskList from '../../Other/TaskList'
 import TaskListNumbers from '../../Other/TaskListNumbers'
 
 const EmployeeDashboard = ({ data }) => {
-    console.log(data);
+
 
 
 
@@ -16,7 +16,7 @@ const EmployeeDashboard = ({ data }) => {
   return (
       <>
           <div className='p-20 bg-[#1c1c1c] h-screen'>
-              <Header name = {data.email} />
+              <Header name = {data.name} />
               <TaskListNumbers numbers = {numbers} />
               <TaskList list={data.tasks} />
           </div>
